@@ -1,9 +1,8 @@
-
 # Dental EOB Field Extraction using LLM
 
 This project is a FastAPI-based application designed to extract structured data from Dental Explanation of Benefits (EOB) PDF documents. It leverages a hybrid approach using **Azure Document Intelligence** for OCR and layout analysis, and **Azure OpenAI (GPT-4o/GPT-5-mini)** for intelligent field extraction. The processed data is standardized and stored in AWS S3, with optional integration to trigger downstream AWS Lambda functions.
 
-## 🚀 Features
+## Features
 
 - **PDF Processing**: Downloads EOB PDFs from AWS S3.
 - **Hybrid Extraction Pipeline**:
@@ -17,7 +16,7 @@ This project is a FastAPI-based application designed to extract structured data 
   - AWS Lambda trigger for post-processing.
   - AWS SSM Parameter Store for secure configuration management.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language**: Python 3.9+
 - **Framework**: FastAPI
@@ -26,7 +25,7 @@ This project is a FastAPI-based application designed to extract structured data 
   - **Azure**: Document Intelligence (Form Recognizer), OpenAI
 - **Libraries**: `boto3`, `azure-ai-formrecognizer`, `openai`, `pydantic`, `uvicorn`
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running the application, ensure you have the following:
 
@@ -36,7 +35,7 @@ Before running the application, ensure you have the following:
     - Azure Document Intelligence resource.
     - Azure OpenAI resource with a deployed model (e.g., GPT-4o).
 
-## 📦 Installation
+## Installation
 
 Since a `requirements.txt` file is not present, install the necessary dependencies manually:
 
@@ -44,7 +43,7 @@ Since a `requirements.txt` file is not present, install the necessary dependenci
 pip install fastapi uvicorn boto3 azure-ai-formrecognizer azure-core openai tiktoken pydantic python-dotenv
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 The application relies on **Environment Variables** and **AWS SSM Parameter Store** for configuration.
 
@@ -119,7 +118,7 @@ The server will start at `http://127.0.0.1:8000`.
 }
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -130,6 +129,4 @@ The server will start at `http://127.0.0.1:8000`.
 └── README.md           # Project documentation
 ```
 
-## 📝 License
 
-[Add License Information Here]
